@@ -7,13 +7,13 @@ Safer method — download the installer first, verify if you want, then run it:
 ## Using curl
 ```bash
 curl -fsSL -o install.sh https://raw.githubusercontent.com/yumi4game/NerdFont/main/install.sh
-bash install.sh -n
+bash install.sh
 ```
 
 ## Or using wget
 ```bash
 wget -O install.sh https://raw.githubusercontent.com/yumi4game/NerdFont/main/install.sh
-bash install.sh -n
+bash install.sh
 ```
 
 Note: piping a remote script directly into `bash` (e.g. `curl ... | bash`) can fail or be unsafe
