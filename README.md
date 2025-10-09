@@ -1,13 +1,31 @@
 # Quick installer for NerdFont files
 
-Quick install (download and run the installer script):
+Quick install (download and run the installer script).
+
+Safer method — download the installer first, verify if you want, then run it:
+
+## Using curl
+```bash
+curl -fsSL -o install.sh https://raw.githubusercontent.com/yumi4game/NerdFont/main/install.sh
+bash install.sh -n
+```
+
+## Or using wget
+```bash
+wget -O install.sh https://raw.githubusercontent.com/yumi4game/NerdFont/main/install.sh
+bash install.sh -n
+```
+
+Note: piping a remote script directly into `bash` (e.g. `curl ... | bash`) can fail or be unsafe
+in some environments. In particular, some older versions of the installer relied on
+`BASH_SOURCE[0]`, which is undefined when the script is executed from a pipe and causes an error
+like: `BASH_SOURCE[0]: unbound variable`.
+
+If you have cloned this repository, run the local script instead to avoid that issue:
 
 ```bash
-# Using curl
-curl -fsSL https://raw.githubusercontent.com/yumi4game/NerdFont/main/install.sh | bash -s -- -n
-
-# Or using wget
-wget -qO- https://raw.githubusercontent.com/yumi4game/NerdFont/main/install.sh | bash -s -- -n
+cd ~/Documents/NerdFont
+./install.sh -n
 ```
 
 This script downloads specified font files from the repository raw URL and installs them into a user font directory.

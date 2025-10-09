@@ -51,31 +51,23 @@ while getopts ":b:t:fnh" opt; do
 done
 shift $((OPTIND-1))
 
-# Determine script directory to find local fonts/ if needed
-SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-LOCAL_FONTS_DIR="$SCRIPT_DIR/fonts"
+# Default list of font basenames to download when no filenames are provided.
+# These are fetched from ${BASE_URL}/<name>
+DEFAULT_FILENAMES=(
+  3270NerdFont-Condensed.ttf
+  3270NerdFontMono-Condensed.ttf
+  3270NerdFontMono-Regular.ttf
+  3270NerdFontMono-SemiCondensed.ttf
+  3270NerdFontPropo-Condensed.ttf
+  3270NerdFontPropo-Regular.ttf
+  3270NerdFontPropo-SemiCondensed.ttf
+  3270NerdFont-Regular.ttf
+  3270NerdFont-SemiCondensed.ttf
+)
 
-# If no filenames provided, try to use local fonts/ directory names
+# If the user supplied filenames, use them; otherwise use the default list above.
 if [ "$#" -eq 0 ]; then
-  if [ -d "$LOCAL_FONTS_DIR" ]; then
-    # collect ttf/otf files from local fonts dir safely (avoid literal globs)
-    pushd "$LOCAL_FONTS_DIR" >/dev/null
-    # enable nullglob so unmatched globs expand to nothing
-    shopt -s nullglob
-    local_files=( *.ttf *.otf )
-    shopt -u nullglob
-    popd >/dev/null
-
-    if [ "${#local_files[@]}" -eq 0 ]; then
-      echo "No local font files found in $LOCAL_FONTS_DIR and no filenames provided." >&2
-      exit 2
-    fi
-    # copy basenames
-    FILENAMES=("${local_files[@]}")
-  else
-    echo "No filenames provided and local fonts directory not found: $LOCAL_FONTS_DIR" >&2
-    exit 2
-  fi
+  FILENAMES=("${DEFAULT_FILENAMES[@]}")
 else
   FILENAMES=("$@")
 fi
