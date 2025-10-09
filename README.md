@@ -11,7 +11,7 @@ curl -fsSL https://raw.githubusercontent.com/yumi4game/NerdFont/main/install.sh 
 
 ## Or using wget
 ```bash
-wget -qO- install.sh https://raw.githubusercontent.com/yumi4game/NerdFont/main/install.sh | bash -s --
+wget -qO- https://raw.githubusercontent.com/yumi4game/NerdFont/main/install.sh | bash -s --
 ```
 
 ## Install for all users
