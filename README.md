@@ -14,6 +14,12 @@ curl -fsSL https://raw.githubusercontent.com/yumi4game/NerdFont/main/install.sh 
 wget -qO- install.sh https://raw.githubusercontent.com/yumi4game/NerdFont/main/install.sh | bash -s --
 ```
 
+## Install for all users
+```bash
+sudo cp -R ~/.fonts/NerdFont /usr/share/fonts
+fc-cache -v
+```
+
 If you have cloned this repository, run the local script instead to avoid that issue:
 
 ```bash
