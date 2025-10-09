@@ -16,8 +16,7 @@ wget -qO- install.sh https://raw.githubusercontent.com/yumi4game/NerdFont/main/i
 
 ## Install for all users
 ```bash
-sudo cp -R ~/.fonts/NerdFont /usr/share/fonts
-fc-cache -v
+sudo cp -R ~/.fonts/NerdFont /usr/share/fonts && fc-cache -v
 ```
 
 If you have cloned this repository, run the local script instead to avoid that issue:
