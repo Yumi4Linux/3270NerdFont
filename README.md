@@ -1,5 +1,8 @@
 # Quick installer for NerdFont fonts
 
+<img width="300" height="120" alt="image" src="https://github.com/user-attachments/assets/f9cf19ac-e35c-4510-ab67-023bb5f304b6" /> <img width="300" height="120" alt="image" src="https://github.com/user-attachments/assets/2710c436-5495-42a9-a580-ec8396b496a2" />
+
+
 Quick install (download and run the installer script).
 
 Safer method — download the installer first, verify if you want, then run it:
