@@ -6,13 +6,13 @@ Safer method — download the installer first, verify if you want, then run it:
 
 ## Using curl
 ```bash
-curl -fsSL -o install.sh https://raw.githubusercontent.com/yumi4game/NerdFont/main/install.sh
+curl -fsSL -o install.sh https://raw.githubusercontent.com/yumi4game/3270NerdFont/main/install.sh
 bash install.sh -n
 ```
 
 ## Or using wget
 ```bash
-wget -O install.sh https://raw.githubusercontent.com/yumi4game/NerdFont/main/install.sh
+wget -O install.sh https://raw.githubusercontent.com/yumi4game/3270NerdFont/main/install.sh
 bash install.sh -n
 ```
 
@@ -24,17 +24,17 @@ like: `BASH_SOURCE[0]: unbound variable`.
 If you have cloned this repository, run the local script instead to avoid that issue:
 
 ```bash
-cd ~/Documents/NerdFont
+cd ~/Documents/3270NerdFont
 ./install.sh -n
 ```
 
 This script downloads specified font files from the repository raw URL and installs them into a user font directory.
 
-File: `install.sh` (also available at https://raw.githubusercontent.com/yumi4game/NerdFont/main/install.sh)
+File: `install.sh` (also available at https://raw.githubusercontent.com/yumi4game/3270NerdFont/main/install.sh)
 
 Features:
 - Downloads font files from the project's `fonts/` directory on GitHub.
-- Installs them into `~/.fonts/NerdFont/` by default (changeable with -t).
+- Installs them into `~/.fonts/3270NerdFont/` by default (changeable with -t).
 - Updates the font cache using `fc-cache`.
 - Supports dry-run (`-n`) and force overwrite (`-f`).
 
