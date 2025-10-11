@@ -1,13 +1,13 @@
-# Quick installer for 3270NerdFont fonts
+# Quick install for 3270NerdFont
 
 <img width="300" height="120" alt="image" src="https://github.com/user-attachments/assets/f9cf19ac-e35c-4510-ab67-023bb5f304b6" /> <img width="300" height="120" alt="image" src="https://github.com/user-attachments/assets/2710c436-5495-42a9-a580-ec8396b496a2" />
 
+* Original Font Name: IBM 3270
+* Version: 3.0.1
+* Info: Derived from the x3270 font, a modern format of a font with high nostalgic value
 
-Quick install (download and run the installer script).
 
-Safer method — download the installer first, verify if you want, then run it:
-
-## Using curl
+## Install using curl
 ```bash
 curl -fsSL https://raw.githubusercontent.com/yumi4linux/3270NerdFont/main/install.sh | bash -s --
 ```
@@ -19,7 +19,7 @@ wget -qO- https://raw.githubusercontent.com/yumi4linux/3270NerdFont/main/install
 
 ## Install for all users
 ```bash
-sudo cp -R ~/.fonts/3270NerdFont /usr/share/fonts && fc-cache -v
+curl -fsSL https://raw.githubusercontent.com/yumi4game/3270NerdFont/main/install.sh | sudo bash -s -- -t /usr/share/fonts/3270NerdFont
 ```
 
 If you have cloned this repository, run the local script instead to avoid that issue:
@@ -28,7 +28,7 @@ If you have cloned this repository, run the local script instead to avoid that i
 git clone https://github.com/yumi4linux/3270NerdFont.git
 cd ./3270NerdFont
 ./install.sh -n
-./install.sh
+./install.sh -t /usr/share/fonts/3270NerdFont
 ```
 
 This script downloads specified font files from the repository raw URL and installs them into a user font directory.
