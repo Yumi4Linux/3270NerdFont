@@ -19,7 +19,7 @@ wget -qO- https://raw.githubusercontent.com/yumi4linux/3270NerdFont/main/install
 
 ## Install for all users
 ```bash
-curl -fsSL https://raw.githubusercontent.com/yumi4game/3270NerdFont/main/install.sh | sudo bash -s -- -t /usr/share/fonts/3270NerdFont
+curl -fsSL https://raw.githubusercontent.com/yumi4linux/3270NerdFont/main/install.sh | sudo bash -s -- -t /usr/share/fonts/3270NerdFont
 ```
 
 If you have cloned this repository, run the local script instead to avoid that issue:

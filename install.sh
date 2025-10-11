@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # install.sh — quick installer that downloads 3270NerdFont files and installs them to ~/.fonts/NerdFont
-set -euo pipefail
+set -euo
 
 # Default installation directory
 ROOT_DIR="$HOME/.fonts/3270NerdFont"
