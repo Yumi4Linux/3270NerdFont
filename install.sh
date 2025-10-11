@@ -6,7 +6,7 @@ set -euo pipefail
 ROOT_DIR="$HOME/.fonts/3270NerdFont"
 
 # Default base URL to download fonts from (as requested)
-BASE_URL="https://raw.githubusercontent.com/yumi4game/3270NerdFont/refs/heads/main/fonts"
+BASE_URL="https://raw.githubusercontent.com/yumi4linux/3270NerdFont/refs/heads/main/fonts"
 
 show_help(){
   cat <<EOF
