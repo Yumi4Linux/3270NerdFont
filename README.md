@@ -9,23 +9,23 @@
 
 ## Install using curl
 ```bash
-curl -fsSL https://raw.githubusercontent.com/yumi4linux/3270NerdFont/main/install.sh | bash -s --
+curl -fsSL https://raw.githubusercontent.com/yumiaura/3270NerdFont/main/install.sh | bash -s --
 ```
 
 ## Or using wget
 ```bash
-wget -qO- https://raw.githubusercontent.com/yumi4linux/3270NerdFont/main/install.sh | bash -s --
+wget -qO- https://raw.githubusercontent.com/yumiaura/3270NerdFont/main/install.sh | bash -s --
 ```
 
 ## Install for all users
 ```bash
-curl -fsSL https://raw.githubusercontent.com/yumi4linux/3270NerdFont/main/install.sh | sudo bash -s -- -t /usr/share/fonts/3270NerdFont
+curl -fsSL https://raw.githubusercontent.com/yumiaura/3270NerdFont/main/install.sh | sudo bash -s -- -t /usr/share/fonts/3270NerdFont
 ```
 
 If you have cloned this repository, run the local script instead to avoid that issue:
 
 ```bash
-git clone https://github.com/yumi4linux/3270NerdFont.git
+git clone https://github.com/yumiaura/3270NerdFont.git
 cd ./3270NerdFont
 ./install.sh -n
 ./install.sh -t /usr/share/fonts/3270NerdFont
@@ -33,7 +33,7 @@ cd ./3270NerdFont
 
 This script downloads specified font files from the repository raw URL and installs them into a user font directory.
 
-File: `install.sh` (also available at https://raw.githubusercontent.com/yumi4linux/3270NerdFont/main/install.sh)
+File: `install.sh` (also available at https://raw.githubusercontent.com/yumiaura/3270NerdFont/main/install.sh)
 
 Features:
 - Downloads font files from GitHub repository.
